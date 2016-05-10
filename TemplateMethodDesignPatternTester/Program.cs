@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Structural = TemplateMethodDesignPatternTester.StructuralCode;
+using Real = TemplateMethodDesignPatternTester.RealWorldCode;
 
 namespace TemplateMethodDesignPatternTester
 {
@@ -55,6 +56,21 @@ namespace TemplateMethodDesignPatternTester
 
 
             #region Real world code in C#
+
+            // Real-world code in C#
+            // 
+            // This real-world code demonstrates a Template method named Run() which provides a skeleton calling sequence of methods.
+            // Implementation of these steps are deferred to the CustomerDataObject subclass which implements the Connect, Select, Process, and Disconnect methods.
+
+            Real.DataAccessObject daoCategories = new Real.Categories();
+            daoCategories.Run();
+
+            Real.DataAccessObject daoProducts = new Real.Products();
+            daoProducts.Run();
+
+            // Wait for user
+            Console.ReadKey();
+
             #endregion
 
 

@@ -18,7 +18,7 @@ namespace TemplateMethodDesignPatternTester.StructuralCode
 
         public override void PrimitiveOperation2()
         {
-            Console.WriteLine("ConcreteClassA.PrimitiveOperation2();");
+            Console.WriteLine("ConcreteClassA.PrimitiveOperation1();");
         }
     }
 }
