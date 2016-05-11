@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Structural = TemplateMethodDesignPatternTester.StructuralCode;
 using Real = TemplateMethodDesignPatternTester.RealWorldCode;
+using My = TemplateMethodDesignPatternTester.MyCode;
 
 namespace TemplateMethodDesignPatternTester
 {
@@ -57,11 +58,6 @@ namespace TemplateMethodDesignPatternTester
 
             #region Real world code in C#
 
-            // Real-world code in C#
-            // 
-            // This real-world code demonstrates a Template method named Run() which provides a skeleton calling sequence of methods.
-            // Implementation of these steps are deferred to the CustomerDataObject subclass which implements the Connect, Select, Process, and Disconnect methods.
-
             Real.DataAccessObject daoCategories = new Real.Categories();
             daoCategories.Run();
 
@@ -70,12 +66,27 @@ namespace TemplateMethodDesignPatternTester
 
             // Wait for user
             Console.ReadKey();
-
+            
             #endregion
 
 
 
             #region My code in C#
+
+            // Real-world code in C#
+            // 
+            // This real-world code demonstrates a Template method named Run() which provides a skeleton calling sequence of methods.
+            // Implementation of these steps are deferred to the CustomerDataObject subclass which implements the Connect, Select, Process, and Disconnect methods.
+
+            My.OperazioneDiBancomat operazioneDiBancomat1 = new My.Prelievo();
+            operazioneDiBancomat1.Run();
+
+            My.OperazioneDiBancomat operazioneDiBancomat2 = new My.RicaricaCellulare();
+            operazioneDiBancomat2.Run();
+
+            // Wait for user
+            Console.ReadKey();
+
             #endregion
         }
     }
